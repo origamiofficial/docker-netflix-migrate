@@ -12,7 +12,7 @@ docker run -it --rm \
   -e PROFILE_NAME=John \
   -e OPERATION=export `#import or export` \
   -e FILE_NAME=NetflixData.json \
-  -v /path/to/Netflix:/Netflix \
+  -v /path/to/Data:/Data \
   rlabinc/netflix-migrate:latest
 ```
 
@@ -30,7 +30,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PROFILE=John` | Specify Netflix profile name. |
 | `-e OPERATION=export` | Set to `export` to export Netflix data or set `import` to import data. |
 | `-e FILE_NAME=NetflixData.json` | Specify the data file name. |
-| `-v /Netflix` | Local path for netflix-migrate data file. |
+| `-v /Data` | Local path for netflix-migrate data file. |
 
 ## Github Repository
 https://github.com/LBBO/netflix-migrate

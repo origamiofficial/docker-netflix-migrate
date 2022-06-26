@@ -2,6 +2,7 @@ FROM node:lts-slim
 
 # set version label
 LABEL github_repository="https://github.com/LBBO/netflix-migrate"
+LABEL docker_github_repository="https://github.com/origamiofficial/docker-netflix-migrate"
 LABEL maintainer="OrigamiOfficial"
 
 # environment settings

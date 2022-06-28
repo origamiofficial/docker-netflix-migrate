@@ -7,8 +7,8 @@ LABEL maintainer="OrigamiOfficial"
 
 # environment settings
 WORKDIR /Data
-ENV NETFLIX_ID "qwerty123"
-ENV SECURE_NETFLIX_ID "abcde123"
+ENV NETFLIX_ID 'qwerty123'
+ENV SECURE_NETFLIX_ID 'abcde123'
 ENV PROFILE_NAME John
 ENV OPERATION export
 ENV FILE_NAME NetflixData.json

@@ -7,7 +7,8 @@ LABEL maintainer="OrigamiOfficial"
 
 # environment settings
 WORKDIR /Data
-ENV COOKIE "qwerty123"
+ENV NETFLIX_ID "qwerty123"
+ENV SECURE_NETFLIX_ID "abcde123"
 ENV PROFILE_NAME John
 ENV OPERATION export
 ENV FILE_NAME NetflixData.json
@@ -17,7 +18,7 @@ RUN npm install --location=global npm@latest
 RUN npm install --location=global netflix-migrate@2.0.0-beta.2
 
 # target run
-CMD npx netflix-migrate --cookie $COOKIE --profile $PROFILE_NAME --$OPERATION $FILE_NAME
+CMD npx netflix-migrate --cookie "NetflixId=$NETFLIX_ID;SecureNetflixId=$SECURE_NETFLIX_ID" --profile $PROFILE_NAME --$OPERATION $FILE_NAME
 
 # volumes
 VOLUME /Data

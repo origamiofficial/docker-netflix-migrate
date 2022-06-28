@@ -52,6 +52,9 @@ https://github.com/LBBO/netflix-migrate
 ## Docker Hub
 https://hub.docker.com/r/rlabinc/netflix-migrate
 
+## Acknowledgements
+All credit goes to [@LBBO](https://github.com/LBBO).
+
 ## Warning
 
 Use of this software may constitute a breach in the [Netflix Terms of Use](https://help.netflix.com/legal/termsofuse) and/or the [End User License Agreement](https://help.netflix.com/legal/eula). Use at your own risk.

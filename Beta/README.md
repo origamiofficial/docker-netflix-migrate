@@ -18,34 +18,37 @@ The architectures supported by this image are:
 
 ## Usage
 You will have to extract the cookie Netflix sets for you
-and provide it to the CLI. But don't worry, I'll guide you through the entire process.
+and provide it to the CLI. But don't worry, I'll guide you through the entire process. It's also worth noting that you can't have an open tab with Netflix while using netflix-migrate.
 
-## Extracting the cookie
+## Extracting the cookie [Easy Method]
+First install [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg) browser extension or any other extension like this. Now open the Netflix website & login into your account if you haven't done so. Open EditThisCookie & copy both values of `NetflixId`,`SecureNetflixId` cookies.
+
+## Extracting the cookie [Manual Method]
 First, you'll need to login to Netflix and select your profile, just as usual. Now, please open your
 browser's dev tools by pressing F12 or right-clicking on the website and choosing "Inspect". Please
 select the "Network" tab on the top of the window that just popped up.
 
 You should see a list of requests that Netflix is making. Scroll to the very top, where you should find
 a request to `www.netflix.com`. If you don't see this request, just reload the page while the network tab
-is open and look for it, again.
+is open and look for it, again. Make sure you do not miss any characters.
 
 Next, please click on this request. A new area should appear with a tab named "Headers". In that tab, please
 scroll down to the area titled "Request Headers" and search for `cookie: [very long value]`. Please copy
-this entire value by manually selecting it with your mouse and pressing Ctrl + C (right-clicking and
+both `NetflixId=` & `SecureNetflixId=` values manually selecting it with your mouse and pressing Ctrl + C (right-clicking and
 choosing "Copy value" can lead to incorrect results in some browsers). Make sure you do not miss any
 characters.
 
 ## Passing the cookie to the CLI
 Now that you've got your cookie, you can execute the actual commands. Please replace the actual values
-below with your own. Make sure the cookie is surrounded by double quotation marks! That section of the command
-should look somewhat like `-e COOKIE="memclid=...%7D"` (your value inside the quotation marks might vary!).
+below with your own. Make sure both cookies are surrounded by single quotation marks! Sometimes at the end of the `NetflixId` cookie, there can be a full stop `.` You must have to include this too!
 Here are the commands you'll need:
 
 ```bash
 docker run -it --rm \
   --name=netflix-migrate \
   -e TZ=Europe/London `#optional` \
-  -e COOKIE="qwerty123" \
+  -e NETFLIX_ID='qwerty123' \
+  -e SECURE_NETFLIX_ID='abcde123' \
   -e PROFILE_NAME=John \
   -e OPERATION=export `#import or export` \
   -e FILE_NAME=NetflixData.json \
@@ -62,7 +65,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | Parameter | Function |
 | :----: | --- |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
-| `-e COOKIE="qwerty123"` | Specify cookie to use. |
+| `-e NETFLIX_ID='qwerty123'` | Specify NetflixId cookie to use. |
+| `-e SECURE_NETFLIX_ID='abcde123'` | Specify SecureNetflixId cookie to use. |
 | `-e PROFILE=John` | Specify Netflix profile name. |
 | `-e OPERATION=export` | Set to `export` to export Netflix data or set `import` to import data. |
 | `-e FILE_NAME=NetflixData.json` | Specify the data file name. |
@@ -73,6 +77,9 @@ https://github.com/LBBO/netflix-migrate/tree/cookie-login
 
 ## Docker Hub
 https://hub.docker.com/r/rlabinc/netflix-migrate
+
+## Acknowledgements
+All credit goes to [@LBBO](https://github.com/LBBO). Special thanks to [@Flavien06](https://github.com/Flavien06) for figure [this](https://github.com/LBBO/netflix-migrate/issues/61#issuecomment-980552615) out.
 
 ## Warning
 

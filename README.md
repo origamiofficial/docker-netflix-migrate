@@ -17,6 +17,7 @@ The architectures supported by this image are:
 | armhf| ✅ | arm32v7-\<version tag\> |
 
 ## Usage
+It's also worth noting that you can't have an open tab with Netflix while using netflix-migrate.
 ```bash
 docker run -it --rm \
   --name=netflix-migrate \

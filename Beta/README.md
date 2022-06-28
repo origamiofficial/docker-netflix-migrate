@@ -47,8 +47,8 @@ Here are the commands you'll need:
 docker run -it --rm \
   --name=netflix-migrate \
   -e TZ=Europe/London `#optional` \
-  -e NETFLIX_ID='qwerty123' \
-  -e SECURE_NETFLIX_ID='abcde123' \
+  -e NETFLIX_ID='qwerty123' `#better to use single quotes` \
+  -e SECURE_NETFLIX_ID='abcde123' `#better to use single quotes` \
   -e PROFILE_NAME=John \
   -e OPERATION=export `#import or export` \
   -e FILE_NAME=NetflixData.json \

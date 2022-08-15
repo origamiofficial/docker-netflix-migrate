@@ -2,6 +2,8 @@
 
 [netflix-migrate](https://github.com/LBBO/netflix-migrate) is a command line utility to export and import your ratings.
 
+# The stable version login is broken and needs the upstream to update. Use the [Beta](https://github.com/origamiofficial/docker-netflix-migrate/tree/main/Beta) version instead.
+
 ## Supported Architectures
 
 We utilise the docker buildx for multi-platform awareness. More information is available from docker [here](https://docs.docker.com/buildx/working-with-buildx/).

@@ -2,6 +2,11 @@
 
 [netflix-migrate](https://github.com/LBBO/netflix-migrate) is a command line utility to export and import your ratings.
 
+## ⚠️ This repository is no longer actively maintained due to a native implementation of its features
+Netflix has implemented a migration feature natively, rendering this project basically useless. While netflix-migrate is able to export slightly more detailed data than you can get from Netflix's native export, the maintanance effort is quite high as they regularly change their API, thereby just breaking the project over night. Hence [@LBBO](https://github.com/LBBO) have decided to officially stop maintaining [this](https://github.com/LBBO/netflix-migrate) project (at least until the need for it resurfaces), so am I.
+
+If you're looking to migrate your profile to another Netflix account, please refer to [the documentation of the official account transfer feature](https://help.netflix.com/en/node/124844). If you want to use this project despite the official feature, please refer to the [`Beta` branch](https://github.com/origamiofficial/docker-netflix-migrate/tree/main/Beta) which contains the latest version which hadn't been merged yet.
+
 ## Supported Architectures
 
 We utilise the docker buildx for multi-platform awareness. More information is available from docker [here](https://docs.docker.com/buildx/working-with-buildx/).
@@ -59,3 +64,5 @@ All credit goes to [@LBBO](https://github.com/LBBO).
 ## Warning
 
 Use of this software may constitute a breach in the [Netflix Terms of Use](https://help.netflix.com/legal/termsofuse) and/or the [End User License Agreement](https://help.netflix.com/legal/eula). Use at your own risk.
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/origamiofficial/docker-netflix-migrate&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://github.com/origamiofficial/docker-netflix-migrate)

@@ -1,4 +1,5 @@
-# netflix-migrate [![Build Status](https://travis-ci.com/LBBO/netflix-migrate.svg?branch=master)](https://travis-ci.com/LBBO/netflix-migrate) ![Docker Pulls](https://img.shields.io/docker/pulls/rlabinc/netflix-migrate.svg?style=flat&label=pulls&logo=docker) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rlabinc/netflix-migrate/latest.svg?style=flat&label=image&logo=docker) ![GitHub Repo stars](https://img.shields.io/github/stars/LBBO/netflix-migrate?style=social)
+# netflix-migrate 
+[![Build Status](https://travis-ci.com/LBBO/netflix-migrate.svg?branch=master)](https://travis-ci.com/LBBO/netflix-migrate) ![Docker Pulls](https://img.shields.io/docker/pulls/rlabinc/netflix-migrate.svg?style=flat&label=pulls&logo=docker) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rlabinc/netflix-migrate/latest.svg?style=flat&label=image&logo=docker) ![GitHub Repo stars](https://img.shields.io/github/stars/LBBO/netflix-migrate?style=social)
 
 [netflix-migrate](https://github.com/LBBO/netflix-migrate) is a command line utility to export and import your ratings.
 
